@@ -20,6 +20,9 @@
     "html",
     "string"
   ],
+  "engines": {
+    "node": "6"
+  },
   "author": "Filip Dupanović <filip.dupanovic@gmail.com>",
   "license": "MIT",
   "bugs": {
