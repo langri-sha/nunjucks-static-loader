@@ -1,5 +1,5 @@
 {
-  "name": "nunjucks-string-loader",
+  "name": "nunjucks-html-string-loader",
   "version": "1.0.0-alpha",
   "description": "Nunjucks loader that renders HTML strings",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/langri-sha/nunjucks-string-loader.git"
+    "url": "git+https://github.com/langri-sha/nunjucks-html-string-loader.git"
   },
   "keywords": [
     "webpack",
@@ -26,9 +26,9 @@
   "author": "Filip Dupanović <filip.dupanovic@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/langri-sha/nunjucks-string-loader/issues"
+    "url": "https://github.com/langri-sha/nunjucks-html-string-loader/issues"
   },
-  "homepage": "https://github.com/langri-sha/nunjucks-string-loader#readme",
+  "homepage": "https://github.com/langri-sha/nunjucks-html-string-loader#readme",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"

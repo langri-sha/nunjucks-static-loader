@@ -1,4 +1,4 @@
-# nunjucks-string-loader
+# nunjucks-html-string-loader
 
 [![Commitizen friendly][commitizen_badge]][commitizen]
 
