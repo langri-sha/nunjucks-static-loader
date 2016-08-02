@@ -1,0 +1,7 @@
+.*
+!.gitignore
+!.eslintrc
+!.editorconfig
+npm-debug.log*
+
+node_modules/
