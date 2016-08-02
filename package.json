@@ -22,5 +22,14 @@
   "bugs": {
     "url": "https://github.com/langri-sha/nunjucks-string-loader/issues"
   },
-  "homepage": "https://github.com/langri-sha/nunjucks-string-loader#readme"
+  "homepage": "https://github.com/langri-sha/nunjucks-string-loader#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "commitizen": "^2.8.2",
+    "cz-conventional-changelog": "^1.1.6"
+  }
 }
