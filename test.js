@@ -23,7 +23,7 @@ const compile = (template, query) => {
         loader: 'raw'
       }, {
         test: /\.html$/,
-        loaders: ['raw', resolve('index')]
+        loaders: ['raw', `${resolve('index')}${queryJson}`]
       }]
     }
   })
@@ -59,4 +59,12 @@ test('Test simple render output', async t => {
   const {result} = await compile('simplest.html')
 
   t.regex(result, /Simplest output/)
+})
+
+test('Test simple context', async t => {
+  const {result} = await compile('context.html', {
+    foo: 'bar'
+  })
+
+  t.regex(result, /bar/)
 })
