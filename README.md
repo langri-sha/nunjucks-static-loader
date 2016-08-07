@@ -1,4 +1,4 @@
-# nunjucks-static-html-loader
+# nunjucks-static-loader
 
 [![JavaScript Style Guide][standard_badge]][standard] [![Commitizen friendly][commitizen_badge]][commitizen] ![Unstable][stability_badge]
 
