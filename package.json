@@ -37,8 +37,12 @@
       "path": "cz-conventional-changelog"
     }
   },
+  "standard": {
+    "parser": "babel-eslint"
+  },
   "devDependencies": {
     "ava": "^0.15.2",
+    "babel-eslint": "^6.1.2",
     "commitizen": "^2.8.2",
     "cz-conventional-changelog": "^1.1.6",
     "memory-fs": "^0.3.0",
