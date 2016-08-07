@@ -1,6 +1,6 @@
 # nunjucks-static-html-loader
 
-[![JavaScript Style Guide][standard_badge]][standard] [![Commitizen friendly][commitizen_badge]][commitizen]
+[![JavaScript Style Guide][standard_badge]][standard] [![Commitizen friendly][commitizen_badge]][commitizen] ![Unstable][stability_badge]
 
 [Nunjucks][nunjucks] loader that renders HTML strings.
 
@@ -23,6 +23,7 @@
 [commitizen]: http://commitizen.github.io/cz-cli/
 [commitizen_badge]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
 [standard]: http://standardjs.com/
+[stability_badge]: https://img.shields.io/badge/status-unstable-red.svg
 [standard_badge]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 
 [compiler_api]: https://webpack.github.io/docs/node.js-api.html
