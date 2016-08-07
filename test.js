@@ -8,7 +8,7 @@ const resolve = (...args) => path.resolve(process.cwd(), ...args)
 const compile = (template, query) => {
   const queryJson = query && `?${JSON.stringify(query)}` || ''
   const compiler = webpack({
-    entry: 'test.txt',
+    entry: template,
     context: resolve('fixtures'),
     resolve: {
       root: resolve('fixtures')
@@ -21,6 +21,9 @@ const compile = (template, query) => {
       loaders: [{
         test: /\.txt$/,
         loader: 'raw'
+      }, {
+        test: /\.html$/,
+        loaders: ['raw', resolve('index')]
       }]
     }
   })
@@ -50,4 +53,10 @@ test('Test Webpack compiler setup', async t => {
 
   t.regex(result, /Tracer ammunition/)
   t.truthy(stats)
+})
+
+test('Test simple render output', async t => {
+  const {result} = await compile('simplest.html')
+
+  t.regex(result, /Simplest output/)
 })
