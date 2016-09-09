@@ -3,6 +3,8 @@ const test = require('ava')
 const webpack = require('webpack')
 const MemoryFs = require('memory-fs')
 
+const loader = require('./index')
+
 const resolve = (...args) => path.resolve(process.cwd(), ...args)
 
 const compile = (template, query) => {
@@ -32,7 +34,7 @@ const compile = (template, query) => {
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
       if (err) {
-        return reject(error)
+        return reject(err)
       }
 
       if (stats.hasErrors() || stats.hasWarnings()) {
