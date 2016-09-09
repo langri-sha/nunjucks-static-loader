@@ -3,8 +3,6 @@ const test = require('ava')
 const webpack = require('webpack')
 const MemoryFs = require('memory-fs')
 
-const loader = require('./index')
-
 const resolve = (...args) => path.resolve(process.cwd(), ...args)
 
 const compile = (template, query) => {
