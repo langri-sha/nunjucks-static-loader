@@ -2,6 +2,7 @@
 !.gitignore
 !.eslintrc
 !.editorconfig
+!.travis.yml
 npm-debug.log*
 
 node_modules/
