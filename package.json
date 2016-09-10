@@ -46,6 +46,7 @@
     "babel-eslint": "^6.1.2",
     "commitizen": "^2.8.2",
     "cz-conventional-changelog": "^1.1.6",
+    "loader-runner": "^2.1.1",
     "memory-fs": "^0.3.0",
     "nunjucks": "^2.4.2",
     "raw-loader": "^0.5.1",
