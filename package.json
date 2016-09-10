@@ -25,7 +25,7 @@
     "string"
   ],
   "engines": {
-    "node": "6"
+    "node": ">= 5.12.x <= 6.x"
   },
   "author": "Filip Dupanović <filip.dupanovic@gmail.com>",
   "license": "MIT",
