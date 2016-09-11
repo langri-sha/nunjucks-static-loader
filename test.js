@@ -1,11 +1,12 @@
+const MemoryFs = require('memory-fs')
 const path = require('path')
 const test = require('ava')
 const webpack = require('webpack')
-const MemoryFs = require('memory-fs')
+const runLoaders = require('loader-runner').runLoaders
 
 const resolve = (...args) => path.resolve(process.cwd(), ...args)
 
-const compile = (template, query) => {
+function compile (template, query) {
   const queryJson = query && `?${JSON.stringify(query)}` || ''
   const compiler = webpack({
     entry: template,
@@ -31,9 +32,7 @@ const compile = (template, query) => {
 
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
-      if (err) {
-        return reject(err)
-      }
+      if (err) return reject(err)
 
       if (stats.hasErrors() || stats.hasWarnings()) {
         return reject(new Error(stats.toString({
@@ -48,11 +47,33 @@ const compile = (template, query) => {
   })
 }
 
+function run (template) {
+  const options = {
+    resource: resolve('fixtures', template),
+    context: {
+      options: {}
+    },
+    loaders: [resolve('index')]
+  }
+
+  return new Promise((resolve, reject) => {
+    runLoaders(options, (err, result) => {
+      err && reject(err) || resolve(result)
+    })
+  })
+}
+
 test('Test Webpack compiler setup', async t => {
   const {result, stats} = await compile('test.txt')
 
   t.regex(result, /Tracer ammunition/)
   t.truthy(stats)
+})
+
+test('Test loader runner setup', async t => {
+  const {result} = await run('simplest.html')
+
+  t.regex(result[0], /Simplest output/)
 })
 
 test('Test simple render output', async t => {
