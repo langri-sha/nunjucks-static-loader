@@ -1,11 +1,11 @@
+const MemoryFs = require('memory-fs')
 const path = require('path')
 const test = require('ava')
 const webpack = require('webpack')
-const MemoryFs = require('memory-fs')
 
 const resolve = (...args) => path.resolve(process.cwd(), ...args)
 
-const compile = (template, query) => {
+function compile (template, query) {
   const queryJson = query && `?${JSON.stringify(query)}` || ''
   const compiler = webpack({
     entry: template,
@@ -31,9 +31,7 @@ const compile = (template, query) => {
 
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
-      if (err) {
-        return reject(err)
-      }
+      if (err) return reject(err)
 
       if (stats.hasErrors() || stats.hasWarnings()) {
         return reject(new Error(stats.toString({
