@@ -2,6 +2,7 @@ const MemoryFs = require('memory-fs')
 const path = require('path')
 const test = require('ava')
 const webpack = require('webpack')
+const runLoaders = require('loader-runner').runLoaders
 
 const resolve = (...args) => path.resolve(process.cwd(), ...args)
 
@@ -46,11 +47,33 @@ function compile (template, query) {
   })
 }
 
+function run (template) {
+  const options = {
+    resource: resolve('fixtures', template),
+    context: {
+      options: {}
+    },
+    loaders: [resolve('index')]
+  }
+
+  return new Promise((resolve, reject) => {
+    runLoaders(options, (err, result) => {
+      err && reject(err) || resolve(result)
+    })
+  })
+}
+
 test('Test Webpack compiler setup', async t => {
   const {result, stats} = await compile('test.txt')
 
   t.regex(result, /Tracer ammunition/)
   t.truthy(stats)
+})
+
+test('Test loader runner setup', async t => {
+  const {result} = await run('simplest.html')
+
+  t.regex(result[0], /Simplest output/)
 })
 
 test('Test simple render output', async t => {
