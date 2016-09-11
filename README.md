@@ -1,6 +1,6 @@
 # nunjucks-static-loader
 
-[![Build status][travis_badge]][travis] [![JavaScript Style Guide][standard_badge]][standard] [![Commitizen friendly][commitizen_badge]][commitizen] ![Unstable][stability_badge]
+[![Build status][travis_badge]][travis]  [![Coverage][codecov_badge]][codecov] [![JavaScript Style Guide][standard_badge]][standard] [![Commitizen friendly][commitizen_badge]][commitizen] ![Unstable][stability_badge]
 
 [Nunjucks][nunjucks] loader that renders HTML strings.
 
@@ -20,6 +20,8 @@
 
 [nunjucks]: http://mozilla.github.io/nunjucks/
 
+[codecov]: https://codecov.io/gh/langri-sha/nunjucks-static-loader
+[codecov_badge]: https://codecov.io/gh/langri-sha/nunjucks-static-loader/branch/master/graph/badge.svg
 [commitizen]: http://commitizen.github.io/cz-cli/
 [commitizen_badge]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
 [stability_badge]: https://img.shields.io/badge/status-unstable-red.svg
