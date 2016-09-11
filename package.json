@@ -4,9 +4,8 @@
   "description": "Nunjucks loader that renders HTML strings",
   "main": "index.js",
   "scripts": {
-    "test": "standard && nyc --repoter=lcov ava",
+    "test": "standard | snazzy && nyc ava --verbose",
     "develop": "ava --watch",
-    "preflight": "standard | snazzy; nyc ava",
     "lint": "standard | snazzy",
     "container": "export NAME=${PWD##*/}; export CACHE=npm-lazy; export CACHE_URL=http://${CACHE}; docker ps -a | grep -q $CACHE && npm run -s container:cache-start || npm run -s container:cache-run; docker ps -a | grep -q $NAME && npm run -s container:app-start || npm run -s container:app-run",
     "container:app-start": "docker start -ai $NAME",
@@ -46,6 +45,7 @@
     "ava": "^0.15.2",
     "babel-eslint": "^6.1.2",
     "commitizen": "^2.8.2",
+    "coveralls": "^2.11.12",
     "cz-conventional-changelog": "^1.1.6",
     "loader-runner": "^2.1.1",
     "memory-fs": "^0.3.0",

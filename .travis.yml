@@ -2,6 +2,12 @@ language: node_js
 node_js:
 - 5
 - 6
+env:
+  global:
+    secure: Z7fxXw/SqiY+HCg3uVOTgx35AzWyFPMnoAdN73kDNa6xwdGjIDNyBdVsfsxzaMXnpJ1j8+i/wxVGtUrxK51STfb+ZDm0DB0KRhsUNU7crOsoNIun3NPBaGYH8xb7iWx2px45BodSCFIloVjrBmrcHJlpC04QTB1QhDsuFItijnhnt5cgerwfOOa5c2UxIz0t9P8Ya/mpgEoQ4OjS5SlVWW+IvFveVUsVMfaR7tP5NcPNL+mbVjlM/PK09Xu619qUNPH/fWG9grmjhAA9B0sxD3WPIk/9SQ/dEzcHa6PGZZZjAfv3Qdi3DM4RnAMXYv/K97+hq7nFTXT0ZVMzOnY79f5zMUOV7xK5pUhtpSkBlMwZiAdloOMVxyFhusiF1IrJj2qeLXYN1hw0LJjNV8HBlM52CBd7ZawpypQx43JaUC7gOBUKFRBGikMkMR+3zEoEdRxfIYqn2GVh9Tw2WgbsGD0v3BrkUZZDmrYmfrB5XaLYNHfJytcsHXkm8nVtuS6nlnnGinMcRn0vgD0V+Av8b/THxVHjPOScJ85mjozNi6SdtikCWncJBdvIaAx+1WHsn5B0yVLPpPW600tS1ZJaJAkgL68ohi/C6a2LupopZ6h/sUoirnwTP7z3l/qDa9IuvYVqBIKfyyKinPOOA4y4cZmZbhKA87drO7ySTdhtX7k=
 cache:
   directories:
   - node_modules
+
+after_script:
+- nyc report --reporter=text-lcov | coveralls --verbose
