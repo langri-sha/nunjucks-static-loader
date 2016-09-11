@@ -11,3 +11,4 @@ cache:
 
 after_script:
 - nyc report --reporter=text-lcov | coveralls --verbose
+- nyc report --reporter=lcov && codecov
