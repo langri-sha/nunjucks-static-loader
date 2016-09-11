@@ -1,6 +1,6 @@
 # nunjucks-static-loader
 
-[![Build status][travis_badge]][travis]  [![Coverage][codecov_badge]][codecov] [![JavaScript Style Guide][standard_badge]][standard] [![Commitizen friendly][commitizen_badge]][commitizen] ![Unstable][stability_badge]
+[![Build status][travis_badge]][travis]  [![Coverage][codecov_badge]][codecov] [![JavaScript Style Guide][standard_badge]][standard] [![Commitizen friendly][commitizen_badge]][commitizen] [![Dependencies][bithound_badge]][bithound] [![Development dependencies][bithound_dev_badge]][bithound_dev] ![Unstable][stability_badge]
 
 [Nunjucks][nunjucks] loader that renders HTML strings.
 
@@ -20,6 +20,10 @@
 
 [nunjucks]: http://mozilla.github.io/nunjucks/
 
+[bithound]: https://www.bithound.io/github/langri-sha/nunjucks-static-loader/master/dependencies/npm
+[bithound_badge]: https://www.bithound.io/github/langri-sha/nunjucks-static-loader/badges/dependencies.svg
+[bithound_dev]: https://www.bithound.io/github/langri-sha/nunjucks-static-loader/master/dependencies/npm
+[bithound_dev_badge]:  https://www.bithound.io/github/langri-sha/nunjucks-static-loader/badges/devDependencies.svg
 [codecov]: https://codecov.io/gh/langri-sha/nunjucks-static-loader
 [codecov_badge]: https://codecov.io/gh/langri-sha/nunjucks-static-loader/branch/master/graph/badge.svg
 [commitizen]: http://commitizen.github.io/cz-cli/
