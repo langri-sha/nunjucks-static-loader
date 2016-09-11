@@ -4,7 +4,7 @@
   "description": "Nunjucks loader that renders HTML strings",
   "main": "index.js",
   "scripts": {
-    "test": "standard && nyc report --repoter=lcov ava",
+    "test": "standard && nyc --repoter=lcov ava",
     "develop": "ava --watch",
     "preflight": "standard | snazzy; nyc ava",
     "lint": "standard | snazzy",
